@@ -6,11 +6,12 @@ class WorldTime extends React.Component {
     super(props);
     this.state = {
       hour: this.props.time,
-      minute: 0
+      minute: 0,
+      stop: false
     };
 
     // this.setState({ minute: 1 });
-    setInterval(() => {
+    this.timer = setInterval(() => {
       this.setState(state =>
         state.minute >= 59
           ? { hour: parseInt(state.hour) + 1, minute: 0 }
@@ -18,6 +19,12 @@ class WorldTime extends React.Component {
       );
     }, 1000);
   }
+
+  handleClick = e => {
+    console.log(e.target.value);
+    this.setState({ stop: e.target.value });
+    clearInterval(this.timer);
+  };
 
   render() {
     return (
@@ -34,30 +41,38 @@ class WorldTime extends React.Component {
           </span>{" "}
           시간: {this.state.hour} 시 {this.state.minute} 분
         </h2>
+        <button value={true} className="timeControl" onClick={this.handleClick}>
+          정지
+        </button>
       </div>
     );
   }
 }
 
-function App() {
-  const cityTimeData = [
-    ["서울", 10],
-    ["베이징", 9],
-    ["시드니", 12],
-    ["LA", 17],
-    ["부산", 10]
-  ];
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.cityTimeData = [
+      ["서울", 10],
+      ["베이징", 9],
+      ["시드니", 12],
+      ["LA", 17],
+      ["부산", 10]
+    ];
 
-  const WorldClockLIst = cityTimeData.map((v, index) => (
-    <WorldTime key={index} city={v[0]} time={[v[1]]} />
-  ));
-
-  return (
-    <div className="App">
-      <h1 className="title">Hello world!</h1>
-      {WorldClockLIst}
-    </div>
-  );
+    this.WorldClockLIst = this.cityTimeData.map((v, index) => (
+      <WorldTime key={index} city={v[0]} time={[v[1]]} />
+    ));
+  }
+  render() {
+    return (
+      <div className="App">
+        <h1 className="title">Hello world!</h1>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        {this.WorldClockLIst}
+      </div>
+    );
+  }
 }
 
 export default App;
