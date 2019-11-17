@@ -8,6 +8,15 @@ class WorldTime extends React.Component {
       hour: this.props.time,
       minute: 0
     };
+
+    // this.setState({ minute: 1 });
+    setInterval(() => {
+      this.setState(state =>
+        state.minute >= 59
+          ? { hour: state.hour + 1, minute: 0 }
+          : { minute: state.minute + 1 }
+      );
+    }, 1000);
   }
 
   render() {
