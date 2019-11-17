@@ -22,13 +22,22 @@ const WorldTime = props => {
 };
 
 function App() {
+  const cityTimeData = [
+    ["서울", 10],
+    ["베이징", 9],
+    ["시드니", 12],
+    ["LA", 17],
+    ["부산", 10]
+  ];
+
+  const WorldClockLIst = cityTimeData.map((v, index) => (
+    <WorldTime key={index} city={v[0]} time={[v[1]]} />
+  ));
+
   return (
     <div className="App">
       <h1 className="title">Hello world!</h1>
-      <WorldTime city={"서울"} time={11} />
-      <WorldTime city={"베이징"} time={10} />
-      <WorldTime city={"시드니"} time={13} />
-      <WorldTime city={"LA"} time={18} />
+      {WorldClockLIst}
     </div>
   );
 }
