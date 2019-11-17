@@ -52,6 +52,11 @@ class WorldTime extends React.Component {
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      content: ""
+    };
+
     this.cityTimeData = [
       ["서울", 10],
       ["베이징", 9],
@@ -64,11 +69,23 @@ class App extends React.Component {
       <WorldTime key={index} city={v[0]} time={[v[1]]} />
     ));
   }
+
+  handleChange = e => {
+    this.setState({ content: e.target.value });
+
+    console.log(this.state.content);
+  };
+
   render() {
     return (
       <div className="App">
         <h1 className="title">Hello world!</h1>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <input
+          name=""
+          id=""
+          onChange={this.handleChange}
+          value={this.state.content}
+        ></input>
         {this.WorldClockLIst}
       </div>
     );
