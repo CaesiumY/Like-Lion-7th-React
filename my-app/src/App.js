@@ -13,7 +13,7 @@ class WorldTime extends React.Component {
     setInterval(() => {
       this.setState(state =>
         state.minute >= 59
-          ? { hour: state.hour + 1, minute: 0 }
+          ? { hour: parseInt(state.hour) + 1, minute: 0 }
           : { minute: state.minute + 1 }
       );
     }, 1000);
