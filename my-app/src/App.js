@@ -10,6 +10,11 @@ class WorldTime extends React.Component {
       stop: false
     };
 
+    console.log(" Chile) Starts");
+  }
+
+  componentDidMount() {
+    console.log(" Child) Did Mount");
     // this.setState({ minute: 1 });
     this.timer = setInterval(() => {
       this.setState(state =>
@@ -25,6 +30,15 @@ class WorldTime extends React.Component {
     this.setState({ stop: e.target.value });
     clearInterval(this.timer);
   };
+
+  componentDidUpdate() {
+    console.log(" Child) Did Update");
+  }
+
+  componentWillUnmount() {
+    console.log(" Child) Will Unmount");
+    clearInterval(this.timer);
+  }
 
   render() {
     return (
@@ -54,7 +68,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      content: ""
+      content: "",
+      show: true
     };
 
     this.cityTimeData = [
@@ -70,10 +85,21 @@ class App extends React.Component {
     ));
   }
 
+  componentDidMount() {
+    console.log("Parent) Did Mount");
+  }
+
+  componentDidUpdate() {
+    console.log("Parent) Did Update");
+  }
+
   handleChange = e => {
     this.setState({ content: e.target.value });
+  };
 
-    console.log(this.state.content);
+  handleClick = e => {
+    this.setState(prevState => ({ show: !prevState.show }));
+    console.log(this.state.show);
   };
 
   render() {
@@ -86,7 +112,8 @@ class App extends React.Component {
           onChange={this.handleChange}
           value={this.state.content}
         ></input>
-        {this.WorldClockLIst}
+        <button onClick={this.handleClick}>튕기기</button>
+        {this.state.show && this.WorldClockLIst}
       </div>
     );
   }
