@@ -29,9 +29,9 @@
 
 4주차 - 11. event **[완료]**<br/>
 4주차 - 12. event handling [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/3d1be18a53fb8b5e08801dd27d7f8b6245114167)<br/>
-4주차 - 13. lifecycle (1) <br/>
-4주차 - 14. lifecycle (2) <br/>
-4주차 - 15. hook <br/>
+4주차 - 13. lifecycle (1) **[완료]**<br/>
+4주차 - 14. lifecycle (2) [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/896851c9018742129098ced474cc2ea222ad41dd)<br/>
+4주차 - 15. hook **[완료]**<br/>
 
 #### [Week 5. React 실전 & REST API]<br/>
 
