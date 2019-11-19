@@ -35,9 +35,9 @@
 
 #### [Week 5. React 실전 & REST API]<br/>
 
-4주차 - 16. 기본 프로젝트 생성 <br/>
-4주차 - 17. API 만들기 <br/>
-4주차 - 18. API & Submit <br/>
+4주차 - 16. 기본 프로젝트 생성 **[완료]**<br/>
+4주차 - 17. API 만들기 **[완료]**<br/>
+4주차 - 18. API & Submit **[완료]**<br/>
 4주차 - 19. postview <br/>
 4주차 - 21. Material-ui <br/>
 4주차 - 22. -form <br/>
