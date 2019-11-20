@@ -1,4 +1,4 @@
-# 🦁Respository for Like Lion 7th 2nd Semester React.js study.⚛
+# 🦁Like Lion 7th 2nd Semester React.js study.⚛
 
 ## 📚 < React 수업 자료 >
 
@@ -39,6 +39,7 @@
 4주차 - 17. API 만들기 [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/7cd7d6f2239dddb4ca84d09d0ca3cb3104d8b619)<br/>
 4주차 - 18. API & Submit [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/98bb4e360f57d968ecc15b3b5318642b7b23e5f8)<br/>
 4주차 - 19. postview [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/89636a119047c77b95e441005aa412708d3a3411)<br/>
+4주차 - 20. Delete & Refresh <br/>
 4주차 - 21. Material-ui <br/>
 4주차 - 22. -form <br/>
 4주차 - 23. card <br/>
