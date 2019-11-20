@@ -1,14 +1,26 @@
 import React from "react";
 import "./App.css";
 import api from "./api";
+import PostView from "./components/PostView";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "",
-      body: ""
+      body: "",
+      results: []
     };
+  }
+
+  componentDidMount() {
+    this.getPosts();
+  }
+
+  async getPosts() {
+    const _results = await api.getAllPosts();
+    this.setState({ results: _results.data });
+    console.log(_results.data);
   }
 
   handleChange = e => {
@@ -43,6 +55,16 @@ class App extends React.Component {
             />
             <button type="submit">제출하기</button>
           </form>
+        </div>
+        <div className="viewSection">
+          {this.state.results.map(post => (
+            <PostView
+              key={post.id}
+              id={post.id}
+              title={post.title}
+              body={post.body}
+            />
+          ))}
         </div>
       </div>
     );
