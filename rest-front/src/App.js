@@ -11,6 +11,7 @@ class App extends React.Component {
       body: "",
       results: []
     };
+    this.getPosts = this.getPosts.bind(this);
   }
 
   componentDidMount() {
@@ -33,6 +34,8 @@ class App extends React.Component {
       title: this.state.title,
       body: this.state.body
     });
+    this.setState({ title: "", body: "" });
+    this.getPosts();
     console.log("completed:", result);
   };
 
@@ -63,6 +66,7 @@ class App extends React.Component {
               id={post.id}
               title={post.title}
               body={post.body}
+              getPosts={this.getPosts}
             />
           ))}
         </div>

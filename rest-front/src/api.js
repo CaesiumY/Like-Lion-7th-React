@@ -9,5 +9,9 @@ export default {
 
   createPost(payload) {
     return axios.post("/posts/", payload);
+  },
+
+  deletePost(payload) {
+    return axios.delete("/posts/" + String(payload));
   }
 };
