@@ -39,7 +39,7 @@
 4주차 - 17. API 만들기 [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/7cd7d6f2239dddb4ca84d09d0ca3cb3104d8b619)<br/>
 4주차 - 18. API & Submit [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/98bb4e360f57d968ecc15b3b5318642b7b23e5f8)<br/>
 4주차 - 19. postview [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/89636a119047c77b95e441005aa412708d3a3411)<br/>
-4주차 - 20. Delete & Refresh <br/>
-4주차 - 21. Material-ui <br/>
+4주차 - 20. Delete & Refresh [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/a3918ca14425429a4b2e7fe0645d0bc9b8af44d2)<br/>
+4주차 - 21. Material-ui [**[완료]**](https://github.com/CaesiumY/Like-Lion-7th-React/tree/8aa67ba23225000b659766c9e60281b88bb9b03c)<br/>
 4주차 - 22. -form <br/>
 4주차 - 23. card <br/>
