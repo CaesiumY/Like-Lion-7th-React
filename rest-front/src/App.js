@@ -46,7 +46,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App" style={{ backgroundColor: "#f5f5f5" }}>
+      <div className="App">
         <Container maxWidth="md">
           <Paper style={{ padding: "1rem", marginBottom: "1rem" }}>
             <div className="postSection">
