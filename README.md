@@ -46,4 +46,6 @@
 
 ### 스크린샷
 
-<img width=400 src="./screenshots/localhost_3000_.png" />
+<details>
+    <img width=600 src="./screenshots/localhost_3000_.png" />
+</details>
