@@ -2,8 +2,11 @@ import React from "react";
 import "./App.css";
 import api from "./api";
 import PostView from "./components/PostView";
+
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 class App extends React.Component {
   constructor(props) {
@@ -48,19 +51,28 @@ class App extends React.Component {
           <Paper style={{ padding: "1rem", marginBottom: "1rem" }}>
             <div className="postSection">
               <h2>대나무 숲 글 작성하기</h2>
-              <form action="" onSubmit={this.handleSubmit}>
-                <input
+              <form action="" onSubmit={this.handleSubmit} className="postForm">
+                <TextField
                   type="text"
                   name="title"
+                  label="title"
+                  variant="outlined"
                   value={this.state.title}
                   onChange={this.handleChange}
                 />
-                <textarea
+                <TextField
                   name="body"
+                  label="body"
+                  multiline
+                  rows="4"
+                  variant="outlined"
+                  margin="normal"
                   value={this.state.body}
                   onChange={this.handleChange}
                 />
-                <button type="submit">제출하기</button>
+                <Button type="submit" variant="outlined" color="primary">
+                  제출하기
+                </Button>
               </form>
             </div>
           </Paper>
